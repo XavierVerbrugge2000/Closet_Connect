@@ -1,15 +1,9 @@
-import '../controller/login_filled_controller.dart';
-import '../models/login_filled_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class LoginFilledItemWidget extends StatelessWidget {
-  LoginFilledItemWidget(this.loginFilledItemModelObj);
-
-  LoginFilledItemModel loginFilledItemModelObj;
-
-  var controller = Get.find<LoginFilledController>();
+  LoginFilledItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +66,7 @@ class LoginFilledItemWidget extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "lbl_email".tr,
+                      "Email",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtNotoSans12.copyWith(
@@ -96,7 +90,7 @@ class LoginFilledItemWidget extends StatelessWidget {
                 bottom: 2,
               ),
               child: Text(
-                "msg_johnwilliamns45_gmail_com".tr,
+                "Johnwilliamns45@gmail.com",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtNotoSansBold16.copyWith(

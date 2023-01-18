@@ -21,7 +21,7 @@ class AppbarButton extends StatelessWidget {
         child: CustomButton(
           height: 31,
           width: 83,
-          text: "lbl_t_shirts".tr,
+          text: "T-shirts",
           variant: ButtonVariant.FillGray10001,
           shape: ButtonShape.RoundedBorder5,
           padding: ButtonPadding.PaddingAll4,

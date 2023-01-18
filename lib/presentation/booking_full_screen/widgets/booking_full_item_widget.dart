@@ -1,15 +1,9 @@
-import '../controller/booking_full_controller.dart';
-import '../models/booking_full_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BookingFullItemWidget extends StatelessWidget {
-  BookingFullItemWidget(this.bookingFullItemModelObj);
-
-  BookingFullItemModel bookingFullItemModelObj;
-
-  var controller = Get.find<BookingFullController>();
+  BookingFullItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +39,7 @@ class BookingFullItemWidget extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "lbl_peter_breis".tr,
+                    "Peter Breis",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRegular15Black900dd.copyWith(
@@ -147,7 +141,7 @@ class BookingFullItemWidget extends StatelessWidget {
                   top: 7,
                 ),
                 child: Text(
-                  "lbl_3_days_ago".tr,
+                  "3 days ago",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtRobotoRegular14.copyWith(
@@ -165,7 +159,7 @@ class BookingFullItemWidget extends StatelessWidget {
                   top: 9,
                 ),
                 child: Text(
-                  "msg_lovely_dress_fits".tr,
+                  "Lovely dress! Fits soooo well :)",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtRobotoRomanLight16.copyWith(

@@ -1,4 +1,3 @@
-import 'controller/search_controller.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/presentation/address_page/address_page.dart';
 import 'package:closet_connect_final/widgets/app_bar/appbar_iconbutton_2.dart';
@@ -8,7 +7,11 @@ import 'package:closet_connect_final/widgets/custom_bottom_bar.dart';
 import 'package:closet_connect_final/widgets/custom_floating_button.dart';
 import 'package:flutter/material.dart';
 
-class SearchScreen extends GetWidget<SearchController> {
+class SearchScreen extends StatelessWidget {
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
+  TextEditingController searchbarController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,8 +22,8 @@ class SearchScreen extends GetWidget<SearchController> {
             56.00,
           ),
           title: AppbarSearchview(
-            hintText: "lbl_woman_jeans".tr,
-            controller: controller.searchbarController,
+            hintText: "Woman’ jeans",
+            controller: searchbarController,
             margin: getMargin(
               left: 29,
             ),
@@ -40,7 +43,8 @@ class SearchScreen extends GetWidget<SearchController> {
         body: Spacer(),
         bottomNavigationBar: CustomBottomBar(
           onChanged: (BottomBarEnum type) {
-            Get.toNamed(getCurrentRoute(type), id: 1);
+            Navigator.pushNamed(
+                navigatorKey.currentContext!, getCurrentRoute(type));
           },
         ),
         floatingActionButton: CustomFloatingButton(

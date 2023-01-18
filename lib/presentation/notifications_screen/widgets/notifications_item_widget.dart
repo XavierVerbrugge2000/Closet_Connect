@@ -1,16 +1,10 @@
-import '../controller/notifications_controller.dart';
-import '../models/notifications_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class NotificationsItemWidget extends StatelessWidget {
-  NotificationsItemWidget(this.notificationsItemModelObj);
-
-  NotificationsItemModel notificationsItemModelObj;
-
-  var controller = Get.find<NotificationsController>();
+  NotificationsItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +45,7 @@ class NotificationsItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  "lbl_order_25474".tr,
+                  "Order #25474",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtOpenSansSemiBold12.copyWith(
@@ -65,7 +59,7 @@ class NotificationsItemWidget extends StatelessWidget {
                     top: 3,
                   ),
                   child: Text(
-                    "msg_your_order_is_out".tr,
+                    "Your order is out for delivery",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoMedium13.copyWith(
@@ -80,7 +74,7 @@ class NotificationsItemWidget extends StatelessWidget {
                     top: 5,
                   ),
                   child: Text(
-                    "lbl_34_min_ago".tr,
+                    "34 min ago",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtOpenSansSemiBold10.copyWith(

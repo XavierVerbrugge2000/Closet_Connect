@@ -27,9 +27,7 @@ class CustomSwitch extends StatelessWidget {
       padding: margin ?? EdgeInsets.zero,
       child: Switch(
         value: value ?? false,
-        onChanged: (value) {
-          onChanged!(value);
-        },
+        onChanged: (value) {},
       ),
     );
   }

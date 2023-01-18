@@ -1,15 +1,9 @@
-import '../controller/address_controller.dart';
-import '../models/address_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class AddressItemWidget extends StatelessWidget {
-  AddressItemWidget(this.addressItemModelObj);
-
-  AddressItemModel addressItemModelObj;
-
-  var controller = Get.find<AddressController>();
+  AddressItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +45,7 @@ class AddressItemWidget extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "lbl_hostel".tr,
+                    "Hostel",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoBold16Black900.copyWith(
@@ -81,7 +75,7 @@ class AddressItemWidget extends StatelessWidget {
                   top: 7,
                 ),
                 child: Text(
-                  "msg_11710_e_railroad".tr,
+                  "11710 E Railroad St, Lake Nebagamon, WI, 54849",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtRobotoRegular12.copyWith(

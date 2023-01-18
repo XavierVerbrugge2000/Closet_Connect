@@ -1,4 +1,3 @@
-import 'controller/search_not_found_controller.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/presentation/address_page/address_page.dart';
 import 'package:closet_connect_final/widgets/app_bar/appbar_iconbutton_2.dart';
@@ -8,7 +7,11 @@ import 'package:closet_connect_final/widgets/custom_bottom_bar.dart';
 import 'package:closet_connect_final/widgets/custom_floating_button.dart';
 import 'package:flutter/material.dart';
 
-class SearchNotFoundScreen extends GetWidget<SearchNotFoundController> {
+class SearchNotFoundScreen extends StatelessWidget {
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
+  TextEditingController searchbarController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,8 +22,8 @@ class SearchNotFoundScreen extends GetWidget<SearchNotFoundController> {
             56.00,
           ),
           title: AppbarSearchview(
-            hintText: "lbl_woman_jeans".tr,
-            controller: controller.searchbarController,
+            hintText: "Woman’ jeans",
+            controller: searchbarController,
             margin: getMargin(
               left: 29,
             ),
@@ -67,7 +70,7 @@ class SearchNotFoundScreen extends GetWidget<SearchNotFoundController> {
                     top: 54,
                   ),
                   child: Text(
-                    "lbl_item_not_found".tr,
+                    "Item not found",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoBold20.copyWith(
@@ -88,7 +91,7 @@ class SearchNotFoundScreen extends GetWidget<SearchNotFoundController> {
                   bottom: 5,
                 ),
                 child: Text(
-                  "msg_try_searching_the".tr,
+                  "Try searching the item with\na different keyword.",
                   maxLines: null,
                   textAlign: TextAlign.center,
                   style: AppStyle.txtRobotoRegular14Gray70001.copyWith(
@@ -103,7 +106,8 @@ class SearchNotFoundScreen extends GetWidget<SearchNotFoundController> {
         ),
         bottomNavigationBar: CustomBottomBar(
           onChanged: (BottomBarEnum type) {
-            Get.toNamed(getCurrentRoute(type), id: 1);
+            Navigator.pushNamed(
+                navigatorKey.currentContext!, getCurrentRoute(type));
           },
         ),
         floatingActionButton: CustomFloatingButton(

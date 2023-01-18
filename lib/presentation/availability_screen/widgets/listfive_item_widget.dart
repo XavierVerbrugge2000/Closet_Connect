@@ -1,15 +1,9 @@
-import '../controller/availability_controller.dart';
-import '../models/listfive_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ListfiveItemWidget extends StatelessWidget {
-  ListfiveItemWidget(this.listfiveItemModelObj);
-
-  ListfiveItemModel listfiveItemModelObj;
-
-  var controller = Get.find<AvailabilityController>();
+  ListfiveItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +11,7 @@ class ListfiveItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "lbl_5".tr,
+          "5",
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
           style: AppStyle.txtInterMedium14.copyWith(
@@ -31,7 +25,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 37,
           ),
           child: Text(
-            "lbl_6".tr,
+            "6",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -46,7 +40,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 38,
           ),
           child: Text(
-            "lbl_7".tr,
+            "7",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -61,7 +55,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 38,
           ),
           child: Text(
-            "lbl_8".tr,
+            "8",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -76,7 +70,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 36,
           ),
           child: Text(
-            "lbl_9".tr,
+            "9",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -91,7 +85,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 33,
           ),
           child: Text(
-            "lbl_10".tr,
+            "10",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -106,7 +100,7 @@ class ListfiveItemWidget extends StatelessWidget {
             left: 33,
           ),
           child: Text(
-            "lbl_11".tr,
+            "11",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(

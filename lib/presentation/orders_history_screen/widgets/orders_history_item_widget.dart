@@ -1,16 +1,10 @@
-import '../controller/orders_history_controller.dart';
-import '../models/orders_history_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class OrdersHistoryItemWidget extends StatelessWidget {
-  OrdersHistoryItemWidget(this.ordersHistoryItemModelObj, {this.onTapRate});
-
-  OrdersHistoryItemModel ordersHistoryItemModelObj;
-
-  var controller = Get.find<OrdersHistoryController>();
+  OrdersHistoryItemWidget({this.onTapRate});
 
   VoidCallback? onTapRate;
 
@@ -42,7 +36,7 @@ class OrdersHistoryItemWidget extends StatelessWidget {
                     bottom: 1,
                   ),
                   child: Text(
-                    "lbl_id_14585212".tr,
+                    "ID #14585212",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRegular13Black900.copyWith(
@@ -57,7 +51,7 @@ class OrdersHistoryItemWidget extends StatelessWidget {
                     top: 1,
                   ),
                   child: Text(
-                    "lbl_today_5_30_pm".tr,
+                    "Today 5:30 PM",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRegular13Black900.copyWith(
@@ -152,7 +146,7 @@ class OrdersHistoryItemWidget extends StatelessWidget {
                               124.00,
                             ),
                             child: Text(
-                              "msg_women_blue_cotton4".tr,
+                              "Women Blue Cotton \nStraight Fit High-Rise",
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtRobotoMedium13.copyWith(
@@ -167,7 +161,7 @@ class OrdersHistoryItemWidget extends StatelessWidget {
                               top: 2,
                             ),
                             child: Text(
-                              "lbl_qty_1".tr,
+                              "Qty 1",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style:
@@ -186,7 +180,7 @@ class OrdersHistoryItemWidget extends StatelessWidget {
                 CustomButton(
                   height: 25,
                   width: 69,
-                  text: "lbl_delivered".tr,
+                  text: "Delivered",
                   margin: getMargin(
                     top: 14,
                     bottom: 14,
@@ -202,13 +196,13 @@ class OrdersHistoryItemWidget extends StatelessWidget {
           CustomButton(
             height: 46,
             width: 283,
-            text: "lbl_rate".tr,
+            text: "Rate",
             margin: getMargin(
               top: 16,
             ),
             padding: ButtonPadding.PaddingAll11,
             fontStyle: ButtonFontStyle.RobotoMedium14,
-            onTap: onTapRate,
+            onTap: () => onTapRate(context),
           ),
         ],
       ),

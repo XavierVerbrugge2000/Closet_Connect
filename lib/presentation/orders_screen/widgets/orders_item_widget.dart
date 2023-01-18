@@ -1,16 +1,10 @@
-import '../controller/orders_controller.dart';
-import '../models/orders_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class OrdersItemWidget extends StatelessWidget {
-  OrdersItemWidget(this.ordersItemModelObj);
-
-  OrdersItemModel ordersItemModelObj;
-
-  var controller = Get.find<OrdersController>();
+  OrdersItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +34,7 @@ class OrdersItemWidget extends StatelessWidget {
                     bottom: 1,
                   ),
                   child: Text(
-                    "lbl_id_14585212".tr,
+                    "ID #14585212",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRegular13.copyWith(
@@ -55,7 +49,7 @@ class OrdersItemWidget extends StatelessWidget {
                     top: 1,
                   ),
                   child: Text(
-                    "lbl_today_5_30_pm".tr,
+                    "Today 5:30 PM",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRegular13.copyWith(
@@ -150,7 +144,7 @@ class OrdersItemWidget extends StatelessWidget {
                             bottom: 1,
                           ),
                           child: Text(
-                            "msg_women_blue_cotton4".tr,
+                            "Women Blue Cotton \nStraight Fit High-Rise",
                             maxLines: null,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRobotoMedium13.copyWith(
@@ -167,7 +161,7 @@ class OrdersItemWidget extends StatelessWidget {
                         left: 63,
                       ),
                       child: Text(
-                        "lbl_qty_1".tr,
+                        "Qty 1",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtRobotoRegular12Gray60001.copyWith(
@@ -182,7 +176,7 @@ class OrdersItemWidget extends StatelessWidget {
                 CustomButton(
                   height: 25,
                   width: 69,
-                  text: "lbl_arriving".tr,
+                  text: "Arriving",
                   margin: getMargin(
                     top: 12,
                     bottom: 31,

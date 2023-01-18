@@ -1,15 +1,9 @@
-import '../controller/orders_rating_controller.dart';
-import '../models/listlanguage_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ListlanguageItemWidget extends StatelessWidget {
-  ListlanguageItemWidget(this.listlanguageItemModelObj, {this.onTapImgRefresh});
-
-  ListlanguageItemModel listlanguageItemModelObj;
-
-  var controller = Get.find<OrdersRatingController>();
+  ListlanguageItemWidget({this.onTapImgRefresh});
 
   VoidCallback? onTapImgRefresh;
 
@@ -47,7 +41,7 @@ class ListlanguageItemWidget extends StatelessWidget {
                       top: 111,
                     ),
                     child: Text(
-                      "msg_women_blue_cotton3".tr,
+                      "Women Blue Cotton Straight Fit High-Rise ",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtRobotoBold15Black900.copyWith(
@@ -86,7 +80,7 @@ class ListlanguageItemWidget extends StatelessWidget {
                             top: 7,
                           ),
                           onTap: () {
-                            onTapImgRefresh!();
+                            onTapImgRefresh!(context);
                           },
                         ),
                       ],

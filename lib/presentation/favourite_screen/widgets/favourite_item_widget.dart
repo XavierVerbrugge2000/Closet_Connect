@@ -1,16 +1,10 @@
-import '../controller/favourite_controller.dart';
-import '../models/favourite_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class FavouriteItemWidget extends StatelessWidget {
-  FavouriteItemWidget(this.favouriteItemModelObj);
-
-  FavouriteItemModel favouriteItemModelObj;
-
-  var controller = Get.find<FavouriteController>();
+  FavouriteItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +62,7 @@ class FavouriteItemWidget extends StatelessWidget {
             top: 10,
           ),
           child: Text(
-            "msg_women_white_self".tr,
+            "Women White Self Design \nCover Up Swim Dress",
             maxLines: null,
             textAlign: TextAlign.left,
             style: AppStyle.txtRobotoMedium11.copyWith(
@@ -85,7 +79,7 @@ class FavouriteItemWidget extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "lbl_250".tr,
+                "\$250",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtRobotoBold12.copyWith(
@@ -101,7 +95,7 @@ class FavouriteItemWidget extends StatelessWidget {
                   bottom: 1,
                 ),
                 child: Text(
-                  "lbl_350".tr,
+                  "\$350",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtRobotoMedium9.copyWith(
@@ -119,7 +113,7 @@ class FavouriteItemWidget extends StatelessWidget {
                   bottom: 1,
                 ),
                 child: Text(
-                  "lbl_30_off".tr,
+                  "(30% OFF)",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtRobotoMedium9Deeporange100.copyWith(

@@ -1,8 +1,7 @@
-import 'controller/side_menu_controller.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
-class SideMenuScreen extends GetWidget<SideMenuController> {
+class SideMenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,15 +1,9 @@
-import '../controller/overview_closet_controller.dart';
-import '../models/grid_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class GridItemWidget extends StatelessWidget {
-  GridItemWidget(this.gridItemModelObj);
-
-  GridItemModel gridItemModelObj;
-
-  var controller = Get.find<OverviewClosetController>();
+  GridItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +33,7 @@ class GridItemWidget extends StatelessWidget {
             top: 10,
           ),
           child: Text(
-            "msg_women_white_self".tr,
+            "Women White Self Design \nCover Up Swim Dress",
             maxLines: null,
             textAlign: TextAlign.left,
             style: AppStyle.txtRobotoMedium11.copyWith(
@@ -54,7 +48,7 @@ class GridItemWidget extends StatelessWidget {
             top: 6,
           ),
           child: Text(
-            "lbl_250".tr,
+            "\$250",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtRobotoBold12.copyWith(

@@ -1,6 +1,4 @@
 import '../favourite_screen/widgets/favourite_item_widget.dart';
-import 'controller/favourite_controller.dart';
-import 'models/favourite_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/presentation/address_page/address_page.dart';
 import 'package:closet_connect_final/widgets/custom_bottom_bar.dart';
@@ -8,7 +6,9 @@ import 'package:closet_connect_final/widgets/custom_floating_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class FavouriteScreen extends GetWidget<FavouriteController> {
+class FavouriteScreen extends StatelessWidget {
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +26,7 @@ class FavouriteScreen extends GetWidget<FavouriteController> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "lbl_favourites".tr,
+                "Favourites",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtRobotoMedium18.copyWith(
@@ -39,30 +39,23 @@ class FavouriteScreen extends GetWidget<FavouriteController> {
                 padding: getPadding(
                   top: 37,
                 ),
-                child: Obx(
-                  () => StaggeredGridView.countBuilder(
-                    shrinkWrap: true,
-                    primary: false,
-                    crossAxisCount: 4,
-                    crossAxisSpacing: getHorizontalSize(
-                      26.00,
-                    ),
-                    mainAxisSpacing: getHorizontalSize(
-                      26.00,
-                    ),
-                    staggeredTileBuilder: (index) {
-                      return StaggeredTile.fit(2);
-                    },
-                    itemCount: controller
-                        .favouriteModelObj.value.favouriteItemList.length,
-                    itemBuilder: (context, index) {
-                      FavouriteItemModel model = controller
-                          .favouriteModelObj.value.favouriteItemList[index];
-                      return FavouriteItemWidget(
-                        model,
-                      );
-                    },
+                child: StaggeredGridView.countBuilder(
+                  shrinkWrap: true,
+                  primary: false,
+                  crossAxisCount: 4,
+                  crossAxisSpacing: getHorizontalSize(
+                    26.00,
                   ),
+                  mainAxisSpacing: getHorizontalSize(
+                    26.00,
+                  ),
+                  staggeredTileBuilder: (index) {
+                    return StaggeredTile.fit(2);
+                  },
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return FavouriteItemWidget();
+                  },
                 ),
               ),
             ],
@@ -70,7 +63,8 @@ class FavouriteScreen extends GetWidget<FavouriteController> {
         ),
         bottomNavigationBar: CustomBottomBar(
           onChanged: (BottomBarEnum type) {
-            Get.toNamed(getCurrentRoute(type), id: 1);
+            Navigator.pushNamed(
+                navigatorKey.currentContext!, getCurrentRoute(type));
           },
         ),
         floatingActionButton: CustomFloatingButton(

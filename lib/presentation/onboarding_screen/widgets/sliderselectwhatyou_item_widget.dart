@@ -1,17 +1,10 @@
-import '../controller/onboarding_controller.dart';
-import '../models/sliderselectwhatyou_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class SliderselectwhatyouItemWidget extends StatelessWidget {
-  SliderselectwhatyouItemWidget(this.sliderselectwhatyouItemModelObj,
-      {this.onTapGetstarted});
-
-  SliderselectwhatyouItemModel sliderselectwhatyouItemModelObj;
-
-  var controller = Get.find<OnboardingController>();
+  SliderselectwhatyouItemWidget({this.onTapGetstarted});
 
   VoidCallback? onTapGetstarted;
 
@@ -40,7 +33,7 @@ class SliderselectwhatyouItemWidget extends StatelessWidget {
                 right: 27,
               ),
               child: Text(
-                "msg_select_what_you".tr,
+                "Select what you love",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtNunitoSansBold22.copyWith(
@@ -59,7 +52,7 @@ class SliderselectwhatyouItemWidget extends StatelessWidget {
                 right: 5,
               ),
               child: Text(
-                "msg_contrary_to_popular".tr,
+                "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
                 maxLines: null,
                 textAlign: TextAlign.center,
                 style: AppStyle.txtNunitoSansLight12.copyWith(
@@ -75,11 +68,11 @@ class SliderselectwhatyouItemWidget extends StatelessWidget {
             CustomButton(
               height: 56,
               width: 280,
-              text: "lbl_get_started".tr,
+              text: "Get started",
               margin: getMargin(
                 top: 77,
               ),
-              onTap: onTapGetstarted,
+              onTap: () => onTapGetstarted(context),
             ),
           ],
         ),

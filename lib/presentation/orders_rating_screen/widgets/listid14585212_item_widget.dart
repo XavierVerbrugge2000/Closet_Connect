@@ -1,15 +1,9 @@
-import '../controller/orders_rating_controller.dart';
-import '../models/listid14585212_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Listid14585212ItemWidget extends StatelessWidget {
-  Listid14585212ItemWidget(this.listid14585212ItemModelObj);
-
-  Listid14585212ItemModel listid14585212ItemModelObj;
-
-  var controller = Get.find<OrdersRatingController>();
+  Listid14585212ItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +35,7 @@ class Listid14585212ItemWidget extends StatelessWidget {
                       bottom: 1,
                     ),
                     child: Text(
-                      "lbl_id_14585212".tr,
+                      "ID #14585212",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtRobotoRegular13.copyWith(
@@ -56,7 +50,7 @@ class Listid14585212ItemWidget extends StatelessWidget {
                       top: 1,
                     ),
                     child: Text(
-                      "lbl_today_5_30_pm".tr,
+                      "Today 5:30 PM",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtRobotoRegular13.copyWith(
@@ -151,7 +145,7 @@ class Listid14585212ItemWidget extends StatelessWidget {
                               bottom: 1,
                             ),
                             child: Text(
-                              "msg_women_blue_cotton4".tr,
+                              "Women Blue Cotton \nStraight Fit High-Rise",
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtRobotoMedium13.copyWith(
@@ -168,7 +162,7 @@ class Listid14585212ItemWidget extends StatelessWidget {
                           left: 63,
                         ),
                         child: Text(
-                          "lbl_qty_1".tr,
+                          "Qty 1",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtRobotoRegular12Gray60001.copyWith(
@@ -203,7 +197,7 @@ class Listid14585212ItemWidget extends StatelessWidget {
                             top: 2,
                           ),
                           child: Text(
-                            "lbl_arriving".tr,
+                            "Arriving",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRobotoMedium12.copyWith(

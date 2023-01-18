@@ -1,16 +1,10 @@
-import '../controller/user_messages_one_controller.dart';
-import '../models/listellipsetwo_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:closet_connect_final/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ListellipsetwoItemWidget extends StatelessWidget {
-  ListellipsetwoItemWidget(this.listellipsetwoItemModelObj);
-
-  ListellipsetwoItemModel listellipsetwoItemModelObj;
-
-  var controller = Get.find<UserMessagesOneController>();
+  ListellipsetwoItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +44,7 @@ class ListellipsetwoItemWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "msg_cameron_williamson".tr,
+                    "Cameron Williamson",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRomanBold16.copyWith(
@@ -64,7 +58,7 @@ class ListellipsetwoItemWidget extends StatelessWidget {
                       top: 6,
                     ),
                     child: Text(
-                      "msg_omg_this_is_amazing".tr,
+                      "omg, this is amazing",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtRobotoRomanLight14Black90099.copyWith(
@@ -88,7 +82,7 @@ class ListellipsetwoItemWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "lbl_14_32".tr,
+                    "14:32",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtRobotoRomanLight14Black90099.copyWith(

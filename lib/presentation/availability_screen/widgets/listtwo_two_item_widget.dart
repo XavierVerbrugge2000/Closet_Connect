@@ -1,15 +1,9 @@
-import '../controller/availability_controller.dart';
-import '../models/listtwo_two_item_model.dart';
 import 'package:closet_connect_final/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ListtwoTwoItemWidget extends StatelessWidget {
-  ListtwoTwoItemWidget(this.listtwoTwoItemModelObj);
-
-  ListtwoTwoItemModel listtwoTwoItemModelObj;
-
-  var controller = Get.find<AvailabilityController>();
+  ListtwoTwoItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +11,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "lbl_22".tr,
+          "2",
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
           style: AppStyle.txtInterMedium14.copyWith(
@@ -31,7 +25,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 37,
           ),
           child: Text(
-            "lbl_32".tr,
+            "3",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -46,7 +40,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 37,
           ),
           child: Text(
-            "lbl_4".tr,
+            "4",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -61,7 +55,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 38,
           ),
           child: Text(
-            "lbl_5".tr,
+            "5",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -76,7 +70,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 37,
           ),
           child: Text(
-            "lbl_6".tr,
+            "6",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -91,7 +85,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 37,
           ),
           child: Text(
-            "lbl_7".tr,
+            "7",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
@@ -106,7 +100,7 @@ class ListtwoTwoItemWidget extends StatelessWidget {
             left: 39,
           ),
           child: Text(
-            "lbl_8".tr,
+            "8",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterMedium14.copyWith(
